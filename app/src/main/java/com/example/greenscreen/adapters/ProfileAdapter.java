@@ -168,9 +168,11 @@ holder.profileBio.setText(profileListed.get(position).getBio());
         public ProfileHolder(@NonNull View v) {
             super(v);
             cardView = v.findViewById(R.id.cvProfile);
-            profileUsername = v.findViewById(R.id.ivImageurl);
+            profileUsername = v.findViewById(R.id.tvUsername);
             profileBio = v.findViewById(R.id.tvBio);
+            image = v.findViewById(R.id.ivImageurl);
         }
+
     }
 
 }
