@@ -15,7 +15,7 @@ public interface GreenService {
     @GET("profile")
     Call<List<Green>> getProfile();
 
-    @GET("profile")
+    @GET("profile/{profile}")
     Call<Green> getProfile(
             @Path("profile") String profile
     );

@@ -83,8 +83,8 @@ public class ProfileAdapter extends RecyclerView.Adapter<ProfileAdapter.ProfileH
 
     @Override
     public void onBindViewHolder(@NonNull ProfileAdapter.ProfileHolder holder, int position) {
-holder.profileUsername.setText("Username" + profileListed.get(position).getUsername());
-holder.profileBio.setText("Bio" + profileListed.get(position).getBio());
+holder.profileUsername.setText(profileListed.get(position).getUsername());
+holder.profileBio.setText(profileListed.get(position).getBio());
         Picasso.with(context).load(profileListed.get(position).getImageurl()).into(holder.image);
 
         holder.itemView.setOnClickListener(new View.OnClickListener(){

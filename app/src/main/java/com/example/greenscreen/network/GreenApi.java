@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class GreenApi {
 
     private static Retrofit retrofit;
-    private static final String BASE_URL =  "http://evepome.herokuapp.com/";
+    private static final String BASE_URL =  "https://evepome.herokuapp.com/";
 
     public static Retrofit getRetrofitInstance() {
         if (retrofit == null) {
