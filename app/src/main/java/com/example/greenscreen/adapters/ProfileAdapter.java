@@ -45,11 +45,13 @@ public class ProfileAdapter extends RecyclerView.Adapter<ProfileAdapter.ProfileH
             final DiffUtil.DiffResult result = DiffUtil.calculateDiff(new DiffUtil.Callback() {
                 @Override
                 public int getOldListSize() {
+
                     return ProfileAdapter.this.profileList.size();
                 }
 
                 @Override
                 public int getNewListSize() {
+
                     return profileList.size();
                 }
 
@@ -81,14 +83,15 @@ public class ProfileAdapter extends RecyclerView.Adapter<ProfileAdapter.ProfileH
 
     @Override
     public void onBindViewHolder(@NonNull ProfileAdapter.ProfileHolder holder, int position) {
-holder.profileUsername.setText(profileListed.get(position).getUsername());
-holder.profileBio.setText(profileListed.get(position).getBio());
+holder.profileUsername.setText("Username" + profileListed.get(position).getUsername());
+holder.profileBio.setText("Bio" + profileListed.get(position).getBio());
         Picasso.with(context).load(profileListed.get(position).getImageurl()).into(holder.image);
 
         holder.itemView.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
                 GreenService greenService = GreenApi.getRetrofitInstance().create(GreenService.class);
+
                 Call<Green> call = greenService.getProfile(profileListed.get(position).getUsername());
                 call.enqueue(new Callback<Green>() {
                     @Override
@@ -100,7 +103,7 @@ holder.profileBio.setText(profileListed.get(position).getBio());
                             intent.putExtra("bio", response.body().getBio());
                             intent.putExtra("email", response.body().getEmail());
                             intent.putExtra("location", response.body().getLocation());
-                            intent.putExtra("image", response.body().getLocation());
+                            intent.putExtra("image", response.body().getImageurl());
                         }
 
                         view.getContext().startActivity(intent);

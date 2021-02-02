@@ -19,6 +19,26 @@
         android:layout_height="match_parent"
         android:background="@android:color/white">
 
+        <TextView
+            android:id="@+id/greenTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Green"
+            android:textStyle="bold"
+            android:textColor="@color/colorAccent"
+            android:textSize="30dp"/>
+
+        <TextView
+            android:id="@+id/screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Screen"
+            android:textStyle="italic"
+            android:layout_below="@+id/greenTextView"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="30dp"/>
+
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvUsername"
             android:layout_width="match_parent"
@@ -34,5 +54,6 @@
             android:padding="5dp">
         </androidx.recyclerview.widget.RecyclerView>
     </LinearLayout>
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
