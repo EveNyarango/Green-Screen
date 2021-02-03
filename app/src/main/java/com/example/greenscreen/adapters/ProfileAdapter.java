@@ -105,7 +105,7 @@ holder.profileBio.setText(profileListed.get(position).getBio());
                             intent.putExtra("bio", response.body().getBio());
                             intent.putExtra("email", response.body().getEmail());
                             intent.putExtra("location", response.body().getLocation());
-                            intent.putExtra("image", response.body().getImageurl());
+                            intent.putExtra("imageurl", response.body().getImageurl());
                         }
 
                         view.getContext().startActivity(intent);
