@@ -7,6 +7,13 @@
     tools:context=".ui.LoginActivity"
     android:background="#000000">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/green" />
+
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -16,12 +23,7 @@
         android:layout_centerHorizontal="true"
         android:id="@+id/linearLayout">
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/green" />
+
 
         <EditText
             android:id="@+id/emailEditText"
