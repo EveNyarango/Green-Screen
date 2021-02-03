@@ -9,4 +9,16 @@
     android:title="Search"
     app:showAsAction="always"
     app:actionViewClass="androidx.appcompat.widget.SearchView" />
+
+    <item
+        android:id="@+id/action_logout"
+        android:title="Logout"
+        android:visible="true"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_profile"
+        android:title="Profile"
+        android:visible="true"
+        app:showAsAction="never" />
 </menu>
