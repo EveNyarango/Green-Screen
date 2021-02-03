@@ -92,7 +92,9 @@ holder.profileBio.setText(profileListed.get(position).getBio());
             public void onClick(View view) {
                 GreenService greenService = GreenApi.getRetrofitInstance().create(GreenService.class);
 
-                Call<Green> call = greenService.getProfile(profileListed.get(position).getUsername());
+//                Call<Green> call = greenService.getProfile(profileListed.get(position).getUsername());
+                Call<Green> call = greenService.getProfile(String.valueOf(profileListed.get(position).getId()));
+
                 call.enqueue(new Callback<Green>() {
                     @Override
                     public void onResponse(Call<Green> call, Response<Green> response) {
