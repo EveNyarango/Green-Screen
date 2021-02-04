@@ -11,6 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Greenscreen">
+        <activity android:name=".ui.UpdatesActivity"></activity>
+        <activity android:name=".ui.DisplayActivity"></activity>
+        <activity android:name=".ui.MessageActivity" />
         <activity android:name=".ui.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,9 +27,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.greenscreen.ui.MainActivity" />
         </activity>
-        <activity android:name=".ui.MainActivity">
-
-        </activity>
+        <activity android:name=".ui.MainActivity" />
     </application>
 
 </manifest>

@@ -32,7 +32,7 @@
             android:nextFocusDown="@+id/passwordEditText"
             android:padding="10dp"
             android:textColor="@android:color/black"
-            android:textColorHint="@color/purple_500"
+            android:textColorHint="@color/colorAccent"
             android:textSize="20sp" />
         <EditText
             android:id="@+id/emailEditText"
@@ -45,7 +45,7 @@
             android:padding="10dp"
             android:layout_marginBottom="10dp"
             android:textColor="@android:color/black"
-            android:textColorHint="@color/purple_500"
+            android:textColorHint="@color/colorAccent"
             android:textSize="20sp" />
         <EditText
             android:id="@+id/passwordEditText"
@@ -58,7 +58,7 @@
             android:padding="10dp"
             android:layout_marginBottom="10dp"
             android:textColor="@android:color/black"
-            android:textColorHint="@color/purple_500"
+            android:textColorHint="@color/colorAccent"
             android:textSize="20sp" />
         <EditText
             android:id="@+id/confirmPasswordEditText"
@@ -71,14 +71,14 @@
             android:padding="10dp"
             android:layout_marginBottom="10dp"
             android:textColor="@android:color/black"
-            android:textColorHint="@color/purple_500"
+            android:textColorHint="@color/colorAccent"
             android:textSize="20sp" />
         <Button
             android:id="@+id/createUserButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:background="@color/white"
+            android:background="@color/colorAccent"
             android:padding="10dp"
             android:text="Sign up"
             android:textColor="@color/white"

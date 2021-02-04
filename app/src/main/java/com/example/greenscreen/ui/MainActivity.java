@@ -12,6 +12,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import com.example.greenscreen.R;
 import com.example.greenscreen.adapters.ProfileAdapter;
@@ -23,21 +25,28 @@ import com.google.firebase.auth.FirebaseAuth;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private SearchView searchView;
     private RecyclerView recyclerView;
     private ProfileAdapter profileAdapter;
     private List<Green> profileList;
+    @BindView(R.id.findPostButton)
+    Button mfindPostButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
+
+        mfindPostButton.setOnClickListener(this);
 
         recyclerView = findViewById(R.id.rvUsername);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -129,6 +138,16 @@ getMenuInflater().inflate(R.menu.main_menu, menu);
             return;
         }
         super.onBackPressed();
+    }
+
+    @Override
+    public void onClick(View v) {
+
+            Intent intent = new Intent(MainActivity.this, UpdatesActivity.class);
+        startActivity(intent);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        finish();
+
     }
 }
 

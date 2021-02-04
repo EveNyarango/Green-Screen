@@ -1,6 +1,7 @@
 package com.example.greenscreen.network;
 
 import com.example.greenscreen.models.Green;
+import com.example.greenscreen.models.Update;
 
 import java.util.List;
 
@@ -18,5 +19,13 @@ public interface GreenService {
     @GET("profile/{profile}")
     Call<Green> getProfile(
             @Path("profile") String profile
+    );
+
+    @GET("updates")
+    Call<List<Update>> getUpdates();
+
+    @GET("updates/{updates}")
+    Call<Update> getUpdates(
+            @Path("updates") String updates
     );
 }

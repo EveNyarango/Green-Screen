@@ -7,6 +7,12 @@
     tools:context=".ui.LoginActivity"
     android:background="#000000">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/green9" />
 
     <LinearLayout
         android:orientation="vertical"
@@ -18,12 +24,12 @@
         android:id="@+id/linearLayout">
 
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="wrap_content"
-            android:layout_height="180dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/green" />
+<!--        <ImageView-->
+<!--            android:id="@+id/imageView"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="180dp"-->
+<!--            android:scaleType="fitCenter"-->
+<!--            android:src="@drawable/green" />-->
 
         <EditText
             android:id="@+id/emailEditText"
@@ -36,7 +42,7 @@
             android:padding="10dp"
             android:layout_marginBottom="10dp"
             android:textColor="@android:color/black"
-            android:textColorHint="@color/purple_500"
+            android:textColorHint="@color/colorAccent"
             android:textSize="20sp" />
         <EditText
             android:id="@+id/passwordEditText"
@@ -48,14 +54,14 @@
             android:nextFocusDown="@+id/passwordEditText"
             android:padding="10dp"
             android:textColor="@android:color/black"
-            android:textColorHint="@color/purple_500"
+            android:textColorHint="@color/colorAccent"
             android:textSize="20sp" />
         <Button
             android:id="@+id/passwordLoginButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:background="@color/white"
+            android:background="@color/colorAccent"
             android:padding="10dp"
             android:text="Log in"
             android:textColor="@color/white"
@@ -64,22 +70,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:textColor="@color/purple_500"
+            android:textColor="@color/white"
             android:textStyle="bold"
-            android:textSize="17sp"
+            android:textSize="25sp"
             android:text="Don't have an account? Sign up here!"
             android:id="@+id/registerTextView"
             android:layout_gravity="center_horizontal" />
     </LinearLayout>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/linearLayout"
-        android:layout_centerHorizontal="true"
-        android:fontFamily="monospace"
-        android:text="Green Screen"
-        android:textColor="@color/colorAccent"
-        android:textSize="25dp"
-        android:textStyle="bold" />
+
 
 </RelativeLayout>
